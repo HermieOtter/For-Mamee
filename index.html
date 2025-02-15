@@ -1,58 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Mom 💖</title>
+    <title>For Mamee 💖</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #ffebcd;
-            margin: 50px;
+            padding: 50px;
+            background-color: #ffebf2;
         }
         .popup {
-            width: 300px;
+            width: 80%;
+            max-width: 400px;
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            position: fixed;
+            margin: auto;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            display: none;
         }
-        .popup h2 {
-            color: #d63384;
+        h2 {
+            color: #ff4d6d;
         }
-        .btn {
-            padding: 10px 20px;
-            background: #d63384;
+        p {
+            color: #333;
+        }
+        .close-btn {
+            background: #ff4d6d;
             color: white;
+            padding: 10px 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>💖 Mom, this is for you 💖</h1>
-    <button class="btn" onclick="showPopup()">Tap Here</button>
 
-    <div class="popup" id="popup">
-        <h2>I'm Sorry, Mom</h2>
-        <p>Mom, I’m really sorry for not helping with housework. I love you so much, and I understand you're tired. I promise I'll always be there for you! 💕</p>
-        <button class="btn" onclick="hidePopup()">Close</button>
-    </div>
+<div class="popup" id="popup">
+    <h2>Dear Mamee, 💖</h2>
+    <p>Mom, I know I let you down,  
+    Left you tired with a worried frown.  
+    I should have helped, I should have seen,  
+    All the ways you cared for me.  
 
-    <script>
-        function showPopup() {
-            document.getElementById("popup").style.display = "block";
-        }
-        function hidePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-    </script>
+    Through every sigh and weary glance,  
+    You gave me love, a second chance.  
+    Your hands so strong, yet soft and kind,  
+    A heart like yours is hard to find.  
+
+    I’m sorry for the times I missed,  
+    The chores undone, the hug unkissed.  
+    But know that deep inside my heart,  
+    We’re never far, we’re never apart.  
+
+    I love you more than words can show,  
+    More than you will ever know.  
+    From this day on, I’ll prove to you,  
+    I’ll stand beside you, strong and true. 💖</p>
+    <button class="close-btn" onclick="closePopup()">I Love You, Mamee! 💕</button>
+</div>
+
+<script>
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
 </body>
 </html>
