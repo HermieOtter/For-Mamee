@@ -23,6 +23,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            display: none;
         }
         h2 {
             color: #ff4d6d;
@@ -39,9 +40,19 @@
             cursor: pointer;
             margin-top: 10px;
         }
+        .show-btn {
+            background: #ff4d6d;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+
+<button class="show-btn" onclick="showPopup()">Show Poem for Mamee 💖</button>
 
 <div class="popup" id="popup">
     <h2>Dear Mamee, 💖</h2>
@@ -68,6 +79,10 @@
 </div>
 
 <script>
+    function showPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
+
     function closePopup() {
         document.getElementById("popup").style.display = "none";
     }
